@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧边栏伸缩</title>
+</head>
+
+<body>
+    <!-- //最外层容器 -->
+    <div class="wrap">
+        <!-- //菜单内容 -->
+        <div class="nav">
+            <!-- 三个按钮 -->
+            <div class="btn">
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+            </div>
+            <div class="icon">
+                <div class="icon-img"><img src="./img/rick.png"></div>
+                <div class="icon-con">
+                    <p>RICK</p>
+                    <h2>ASSHOLE</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Menu D</p>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/会员.png"> </span>
+                    </div>
+                    <div class="con">YOU</div>
+                    <div class="ricon"><img class="iconn" src="img/喜欢.png"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/首页.png"> </span>
+                    </div>
+                    <div class="con">CAN</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/商品.png"> </span>
+                    </div>
+                    <div class="con">COUNT</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/分类.png"> </span>
+                    </div>
+                    <div class="con">ON</div>
+                    <div class="ricon"><img class="iconn" src="img/喜欢.png"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Serve D</p>
+            </div>
+            <div class="serve">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/首页.png"> </span>
+                    </div>
+                    <div class="con">ME</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/商品.png"> </span>
+                    </div>
+                    <div class="con">LIKE</div>
+                    <div class="ricon"><img class="iconn" src="img/喜欢.png"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/会员.png"> </span>
+                    </div>
+                    <div class="con">ONE T</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span><img class="iconn" src="img/分类.png"> </span>
+                    </div>
+                    <div class="con">THREE</div>
+                    <div class="ricon"><img class="iconn" src="img/喜欢.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .iconn {
+        width: 20px;
+        height: 20px;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ricon .iconn {
+        font-size: 20px;
+        color: #62cb44;
+    }
+    
+    .wrap {
+        width: 100%;
+        height: 100vh;
+        background: salmon;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav {
+        width: 110px;
+        overflow: hidden;
+        height: 720px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+    
+    .nav:hover {
+        width: 280px;
+    }
+    
+    .btn {
+        width: 60px;
+        height: 10px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+    
+    .btn-item {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    
+    .btn-item:nth-child(1) {
+        background: #eb5a56;
+    }
+    
+    .btn-item:nth-child(2) {
+        background: #f8bc33;
+    }
+    
+    .btn-item:nth-child(3) {
+        background: #62cb44;
+    }
+    
+    .icon {
+        width: 250px;
+        height: 60px;
+        margin-left: 25px;
+        margin-top: 20px;
+        display: flex;
+    }
+    
+    .icon-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        overflow: hidden;
+    }
+    
+    .icon-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .icon-con {
+        height: 60px;
+        margin-left: 25px;
+    }
+    
+    .icon-con p {
+        padding-top: 5px;
+    }
+    
+    .icon-con h2 {
+        font-weight: 400;
+    }
+    
+    .line {
+        width: 60px;
+        height: 1px;
+        background: rgba(245, 253, 255, 0.5);
+        margin: 20px 25px;
+        transition: 0.5s;
+    }
+    
+    .nav:hover .line {
+        width: 230px;
+    }
+    
+    .title {
+        width: 60px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .title p {
+        font-size: 14px;
+    }
+    
+    .menu {
+        width: 230px;
+        margin-left: 25px;
+    }
+    
+    .item {
+        display: flex;
+        position: relative;
+        transition: 0.5s;
+        border-radius: 6px;
+    }
+    
+    .item:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .licon {
+        width: 60px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .con {
+        width: 0;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        overflow: hidden;
+        position: relative;
+        left: -20px;
+        opacity: 0;
+    }
+    
+    .nav:hover .con {
+        width: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+    
+    .ricon {
+        width: 0;
+        height: 50px;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+    .nav:hover .ricon {
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        opacity: 1;
+    }
+    
+    .light {
+        width: 6px;
+        height: 50px;
+        background: #eb5a56;
+        position: absolute;
+        left: -25px;
+        transition: 0.5s;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        opacity: 0;
+    }
+    
+    .item:hover .light {
+        opacity: 1;
+    }
+    
+    .serve {
+        width: 60px;
+        background: rgba(0, 0, 0, 0.7);
+        margin-left: 25px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    
+    .nav:hover .serve {
+        width: 230px;
+    }
+</style>
+
+</html>
